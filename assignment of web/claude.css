@@ -1,0 +1,88 @@
+.hero {
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+    width: 100%;
+}
+
+.place {
+    margin: 100px;
+    margin-bottom: 100px;
+}
+
+.place h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.place p {
+    text-align: center;
+    margin-bottom: 50px;
+    color: grey;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+.gallery1 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.gallery1-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 4/3;
+    transition: transform 0.6s ease;
+}
+
+.gallery1-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.gallery1-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery1-caption {
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.689);
+    color: black;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.tall {
+    grid-column: span 2/3;
+    grid-row: span 2/3;
+}
+
+@media (max-width: 768px) {
+
+    .large,
+    .tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

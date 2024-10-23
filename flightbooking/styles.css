@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: url('./Flight/Background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    z-index: 1;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.form-container input, .form-container select, .form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-container button:hover {
+    background-color: #042649;
+}
+
+.date-inputs, .select-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-inputs div, .select-inputs div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.date-inputs div:last-child, .select-inputs div:last-child {
+    margin-right: 0;
+}
+
+.hero-text {
+    position: absolute;
+    right: 50px;
+    color: white;
+    text-align: right;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 30px;
+}
+
+@media (max-width: 1440px) {
+    .hero-text {
+        right: 10px;
+        left: 10px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .date-inputs, .select-inputs {
+        flex-direction: column;
+    }
+
+    .date-inputs div, .select-inputs div {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .date-inputs div:last-child, .select-inputs div:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-text {
+        position: relative;
+        right: 50px;
+        color: white;
+        text-align: center;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 100%;
+        background-size: cover;
+    }
+
+    .form-container {
+        max-width: 100%;
+        width: 90%;
+        margin: 10px;
+    }
+
+    .hero-text {
+        right: 10px;
+        left: 10px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+}

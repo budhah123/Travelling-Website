@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+html{
+    background: url(./Hotel/enjoyyourtrip.webp) no-repeat center center/cover ;
+    background-size: cover;
+    height: 100%;
+}
+.confirmation-container {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .confirmation-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+.confirmation-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+

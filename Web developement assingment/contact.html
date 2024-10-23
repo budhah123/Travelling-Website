@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../Web developement assingment/header.css">
+    <link rel="stylesheet" href="../Web developement assingment/footer.css">
+</head>
+<style>
+    body,
+    h1,
+    p,
+    form,
+    input,
+    textarea,
+    button {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Basic body styling */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    /* Container styling */
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header styling */
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* Paragraph styling */
+    p {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #666;
+    }
+
+    /* Form group styling */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    /* Label styling */
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    /* Input and textarea styling */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Button styling */
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #3aeb2a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #434190;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 600px) {
+        .container {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <body>
+        <!-- Include Header -->
+        <div id="header"></div>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, feel free to reach out to us by filling out the form below.</p>
+            <form id="contactForm" action="/submit-form" method="post" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="footer"></div>
+
+        
+        <script>
+
+            fetch('../Web developement assingment/header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data);
+
+            fetch('../Web developement assingment/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        </script>
+
+        <script src="scripts.js"></script>
+        <script> function validateForm() {
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let message = document.getElementById("message").value;
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (name === "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                if (email === "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid email address");
+                    return false;
+                }
+
+                if (message === "") {
+                    alert("Message must be filled out");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+
+
+    </body>
+
+</html>

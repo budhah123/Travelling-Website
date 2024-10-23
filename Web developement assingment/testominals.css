@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* service dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+/* ***************Home****************************** */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(250, 254, 255);
+    width: 100%;
+    height: 12%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+.logo img {
+    width: 69px;
+    margin: 0 12px;
+}
+
+.nav_bar {
+    margin: 10px;
+    padding: 12px;
+}
+
+.nav_bar a {
+    margin: 12px;
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+
+    height: 20%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav_bar a:hover {
+    color: whitesmoke;
+}
+
+.nav_bar a::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: blue;
+    color: whitesmoke;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: -1;
+    transition: .3s;
+}
+
+.nav_bar a:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+
+.login {
+    width: 30%;
+    right: 0;
+
+}
+
+.login a {
+    height: 38px;
+    position: relative;
+    width: 25%;
+    font-size: 18px;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 12px;
+    background-color: aqua;
+    color: blue;
+    float: right;
+    cursor: pointer;
+    margin-right: 50px;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.login a:hover {
+    color: white;
+}
+
+.login a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: blue;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: -1;
+    transition: .3s;
+
+}
+
+.login a:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./blogs\ 2.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 250px;
+    
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: gray;
+}
+
+
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.traveler-info {
+
+    gap: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+    
+}
+
+.traveler-photo img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+}
+
+.traveler-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.traveler-details h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.traveler-details p {
+    margin: 0;
+    color: gray;
+}
+
+blockquote {
+    margin: 0;
+    font-style: italic;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.testimonial-text p {
+    margin: 0 0 10px;
+    line-height: 1.6;
+    color: #333;
+}
+.footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 30px 0;
+    height: 270px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer h2,
+.footer h3 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: none;
+    color: blue;
+
+}
+
+.footer ul li:hover {
+    transform: translateX(5px);
+}
+
+.footer form {
+    display: flex;
+    align-items: center;
+}
+
+.footer form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.footer form button {
+    padding: 10px 20px;
+    border: none;
+    font-family: sans-serif;
+    border-radius: 0 5px 5px 0;
+    background-color: aqua;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.1s ease;
+}
+
+.footer form button:hover {
+    background-color: blue;
+    color: white;
+
+
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: whitesmoke;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: blue;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}

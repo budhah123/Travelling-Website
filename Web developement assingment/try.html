@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+/* ***************Home****************************** */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(250, 254, 255);
+    width: 100%;
+    height: 12%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+.logo img {
+    width: 69px;
+    margin: 0 12px;
+}
+
+.nav_bar {
+    margin: 10px;
+    padding: 12px;
+}
+
+.nav_bar a {
+    margin: 12px;
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+
+    height: 20%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav_bar a:hover {
+    color: whitesmoke;
+}
+
+.nav_bar a::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: blue;
+    color: whitesmoke;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: -1;
+    transition: .3s;
+}
+
+.nav_bar a:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+
+.login {
+    width: 30%;
+    right: 0;
+
+}
+
+.login a {
+    height: 38px;
+    position: relative;
+    width: 25%;
+    font-size: 18px;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 12px;
+    background-color: aqua;
+    color: blue;
+    float: right;
+    cursor: pointer;
+    margin-right: 50px;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.login a:hover {
+    color: white;
+}
+
+.login a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: blue;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: -1;
+    transition: .3s;
+
+}
+
+.login a:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./blogs\ 2.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 250px;
+    
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: gray;
+}
+    .heading{
+        padding: 50px 0;
+        text-align: center;
+        width: 100%;
+    }
+    .heading p{
+        padding:  0 40px;
+        margin: 12px;
+    }
+
+    .card-container {
+        display: flex;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .card {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 320px;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 150px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+        display: flex;
+        margin-bottom: 8px;
+
+
+    }
+
+    .image-placeholder img {
+        border-radius: 12px;
+        width: 100%;
+
+    }
+
+
+
+
+    h3 {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    p {
+        text-align: center;
+        color: #666;
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+
+    .price-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .price {
+        font-size: 1.5em;
+        color: #333;
+        font-weight: bold;
+    }
+
+    button {
+        background-color: aqua;
+        color: blue;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        transition: .1s;
+    }
+
+    button:hover {
+        background-color: blue;
+        color: white;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./pngtree-scool-college-logo-victor-vector-png-image_6634445.png" alt="">
+        </div>
+        <div class="nav_bar">
+            <a href="./Home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Destination</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="../flightbooking/index.html">Flights</a>
+                    <a href="../carrental/index.html">Car Rental</a>
+                    <a href="../Hotelbooking/index.html">Hotels</a>
+                </div>
+            </div>
+           
+
+            <a href="blog.html">Blogs</a>
+            <a href="./Contact.html">Contact us</a>
+        </div>
+        <div class="login">
+            <a href="./Login.html">Login</a>
+        </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>What's Our Cutsomers Say</h1>
+            <p>At Acme Travel, we believe in the power of adventure and the transformative experience of exploring new
+                places. Join us on unforgettable journeys to discover the beauty and wonder of the world.</p>
+        </div>
+    </div>
+    <div class="heading">
+        <h1>Our Tour Packages</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at assumenda nobis vitae, deleniti quaerat
+            tempore voluptatum nisi odit minima eius quidem soluta, explicabo totam. Distinctio obcaecati quis vitae
+            dolores.</p>
+    </div>
+    <div class="card-container">
+        
+        <div class="card">
+            <div class="image-placeholder">
+                <img src="./blogs 2.jpg" alt="">
+            </div>
+            <h3>France Adventure</h3>
+            <p>Explore the stunning beaches and lush rainforests of France.</p>
+            <div class="price-button">
+                <span class="price">$2,499</span>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-placeholder">
+                <img src="./blogs 1.jpg" alt="">
+            </div>
+            <h3>Australia</h3>
+            <p>Immerse yourself in the serene beauty of Australia.</p>
+            <div class="price-button">
+                <span class="price">$3,199</span>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-placeholder">
+                <img src="./blogs 5.jpeg" alt="">
+            </div>
+            <h3>Switzerland</h3>
+            <p>Explore the breathtaking landscapes of SwitzerLand.</p>
+            <div class="price-button">
+                <span class="price">$4,799</span>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-placeholder">
+                <img src="./background image 5.jpg" alt="">
+            </div>
+            <h3>Korea</h3>
+            <p>Visiting the breathtaking landscapes of korea.</p>
+            <div class="price-button">
+                <span class="price">$4,799</span>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

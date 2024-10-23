@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Recommendations</title>
+    <link rel="stylesheet" href="cars.css">
+    <link rel="stylesheet" href="../Web developement assingment/header.css">
+    <link rel="stylesheet" href="../Web developement assingment/footer.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="cars-container" id="carsContainer">
+            <!-- Car rental recommendations will be inserted here -->
+        </div>
+    </div>
+    <script src="cars.js"></script>
+    <div id="footer"></div> 
+    <script src="script.js"></script>
+    <script>
+        
+        fetch('../Web developement assingment/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch('../Web developement assingment/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>

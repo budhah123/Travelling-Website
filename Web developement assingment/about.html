@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Web developement assingment/about.css">
+    <link rel="stylesheet" href="../Web developement assingment/header.css">
+    <link rel="stylesheet" href="../Web developement assingment/footer.css">
+
+    <title>About Us</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section class="about-us">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Explore the World with Us</h1>
+                <p>At Travel Tree, we believe in the power of adventure and the transformative experience of exploring
+                    new places. Join us on unforgettable journeys to discover the beauty and wonder of the world.</p>
+            </div>
+        </div>
+        <div class="about-section">
+            <div class="story">
+                <h2>Our Story</h2>
+                <p>Founded in 2020, our Innovation & IT Club was established with a passion for technology and a desire to
+                    share our expertise with others. We believe that technology has the power to broaden our perspectives,
+                    connect us with diverse ideas, and create lasting innovations.</p>
+                <p>Our mission is to inspire and empower our clients to embark on transformative digital journeys, while
+                    prioritizing sustainable and responsible tech practices. We are committed to curating unique
+                    solutions that not only satisfy our clients' technological needs but also contribute to the well-being of
+                    the communities we serve.</p>
+            </div>
+            <div class="values">
+                <h2>Our Values</h2>
+                <ul>
+                    <li>Sustainable and Responsible Travel</li>
+                    <li>Authentic Cultural Experiences</li>
+                    <li>Personalized and Tailored Itineraries</li>
+                    <li>Exceptional Customer Service</li>
+                </ul>
+            </div>
+        </div>
+        <div class="heading1">
+            <h1>Our Team Members</h1>
+        </div>
+        <div class="team-section">
+
+            <div class="team-member">
+                <div class="icon">👤</div>
+                <h2>Yugina Gurung</h2>
+                <h3>Co-Founder, CEO</h3>
+                <p>Yugina is a seasoned traveler and adventurer who founded Acme Travel to share his passion for
+                    exploring the world.</p>
+            </div>
+            <div class="team-member">
+                <div class="icon">👤</div>
+                <h2>Achyut Sunar</h2>
+                <h3>Co-Founder, COO</h3>
+                <p>Achyut is an experienced travel planner and logistics expert who ensures every Acme Travel adventure
+                    runs smoothly.</p>
+            </div>
+            <div class="team-member">
+                <div class="icon">👤</div>
+                <h2>Rabeena Sapkota</h2>
+                <h3>Head of Marketing</h3>
+                <p>Rabeena is a passionate storyteller who shares the Acme Travel experience with the world, inspiring
+                    others to embark on their own adventures.</p>
+            </div>
+            <div class="team-member">
+                <div class="icon">👤</div>
+                <h2>Hemraj Budha</h2>
+                <h3>Head of Operations</h3>
+                <p>Hemraj is an expert in logistics and customer service, ensuring every Acme Travel experience exceeds
+                    expectations.</p>
+            </div>
+        </div>
+
+ 
+        <div class="heading2">
+            <h1>Our Website information</h1>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h2>Destinations</h2>
+                <p>Explore our curated list of top travel destinations around the world.</p>
+                <a href="../assignment of web/exotic.html">View Destinations &rarr;</a>
+            </div>
+            <div class="card">
+                <h2>Tours</h2>
+                <p>Check out our exciting tour packages for your next adventure.</p>
+                <a href="../assignment of web/yt.html">View Tours &rarr;</a>
+            </div>
+            <div class="card">
+                <h2>Our Services</h2>
+                <p>Learn more about our company and our mission to inspire travel.</p>
+                <a href="../Hotelbooking/index.html">Read More &rarr;</a>
+            </div>
+            <div class="card">
+                <h2>Testimonials</h2>
+                <p>Hear what our satisfied customers have to say about their Acme Travel experiences.</p>
+                <a href="../Web developement assingment/testimonials.html">View Testimonials &rarr;</a>
+            </div>
+            <div class="card">
+                <h2>Blog</h2>
+                <p>Read our latest travel tips, destination guides, and adventure stories.</p>
+                <a href="../Web developement assingment/blog.html">Visit the Blog &rarr;</a>
+            </div>
+            <div class="card">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team to plan your next adventure.</p>
+                <a href="../Web developement assingment/contact.html">Contact Us &rarr;</a>
+            </div>
+        </div>
+        <div class="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="icon">
+                        <!-- Add your icon here, for example, using FontAwesome -->
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Personalized Itineraries</h3>
+                    <p>Our team of travel experts will work with you to create a customized itinerary that caters to
+                        your unique preferences and interests.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">
+                        <!-- Add your icon here -->
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Destination Guides</h3>
+                    <p>Explore our comprehensive destination guides to discover hidden gems, local hotspots, and
+                        must-see attractions in every corner of the world.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">
+                        <!-- Add your icon here -->
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Forums</h3>
+                    <p>Connect with fellow travelers, share your experiences, and get insider tips and recommendations
+                        through our vibrant community forums.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        
+        fetch('../Web developement assingment/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch('../Web developement assingment/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>

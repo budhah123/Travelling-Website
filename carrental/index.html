@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../Web developement assingment/header.css">
+    <link rel="stylesheet" href="../Web developement assingment/footer.css">
+</head>
+
+<body>
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="form-container">
+            <form id="carRentalForm">
+                <h2>Your Destination</h2>
+                <select id="destination" required>
+                    <option value="" disabled selected>Select a destination</option>
+                    <option value="china">China</option>
+                    <option value="switzerland">Switzerland</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="australia">Australia</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="india">India</option>
+                    <option value="italy">Italy</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="southkorea">South Korea</option>
+                </select>
+
+                <div class="date-inputs">
+                    <div>
+                        <label for="pickup">Pick Up</label>
+                        <input type="date" id="pickup" required>
+                    </div>
+                    <div>
+                        <label for="dropoff">Drop Off</label>
+                        <input type="date" id="dropoff" required>
+                    </div>
+                </div>
+
+                <div class="select-inputs">
+                    <div>
+                        <label for="carType">Car Type</label>
+                        <select id="carType">
+                            <option value="economy">Economy</option>
+                            <option value="compact">Compact</option>
+                            <option value="midsize">Midsize</option>
+                            <option value="suv">SUV</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Check availability</button>
+            </form>
+        </div>
+        <div class="hero-text">
+            <h1>RENT A CAR</h1>
+            <p>go everywhere at your own pace</p>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load header and footer
+        fetch('../Web developement assingment/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch('../Web developement assingment/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>
